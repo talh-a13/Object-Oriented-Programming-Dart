@@ -146,4 +146,51 @@ double temp=width?? 0; it's same thing
 
 
 
+Constructor in Dart  
+
+Specialized method that creates instances of class. 
+
+
+Example 
+
+void main() {
+  Student student = Student('Talha Hussain', 21);
+  student.display();
+}
+
+class Student {
+  String? name;
+  int? age;
+  Student(String Name, int Age) {
+    this.name = Name;
+    this.age = Age;
+  }
+
+  void display() {
+    print(this.name);
+    print(this.age);
+  }
+}
+
+
+Constructor Example Using List
+
+
+void main() {
+  List<Student> name = [Student("Talha", 21), Student("Ali", 22)];
+  name.forEach((element) {
+    print(element.name);
+  });
+}
+
+class Student {
+  String? name;
+  int? age;
+  Student(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+
 */
