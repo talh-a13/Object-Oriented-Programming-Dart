@@ -90,7 +90,60 @@ class Student {
     print(" ${name} New Grade :${grade}");
   }
 }
+
+
+ Error Handling and Null check Operator
+
+Example 1 Simple
+
+void main() {
+  Area area = Area();
+  area.length = 5.0;
+  area.width = 6.0;
+  area.calculateArea();
+}
+
+class Area {
+  double? width;
+  double? length;
+  void calculateArea() {
+    double area = length! * width!;
+    print(area);
+  }
+}
  
+
+Example 1 :  
+
+void main() {
+  Area area = Area();
+  area.length = 5.0;
+  area.calculateArea();
+}
+
+class Area {
+  double? width;
+  double? length;
+  void calculateArea() {
+if(width==null){
+print("Width Cannot be null");
+width=0;
+} 
+   double area = length! * width!;
+    print(area);
+  }
+}
+
+In order To Handle exception we can also write this code in try and catch 
+ 
+
+if(width==null){
+print("Width Cannot be null");
+width=0;
+} 
+can also be written as 
+double temp=width?? 0; it's same thing  
+
 
 
 */
